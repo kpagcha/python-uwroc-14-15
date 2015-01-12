@@ -1,0 +1,13 @@
+1) We say that the number is *happy* if its decimal representation contains three consecutive digits 7 (17771 is happy, 77177 is not). Create a program printing all happy prime numbers less than 1,000,000
+
+2) The number is *extra happy* if it contains 7 consecutive 7's. Modify the above in such a way that it will print all extra happy prime numbers with 10 digits. The program should be fast: all numbers should be printed in about 10s.
+
+3) Use the turtle library (https://docs.python.org/2/library/turtle.html#) in order to obtain 2 from the 6 pictures attatched to this e-mail.
+
+4) Write the function which returns random permutation of the list. It should work as the following one:
+
+def randperm(L):
+  L = L[:]
+  random.shuffle(L)
+  return L
+ however, you shouldn't use shuffle.

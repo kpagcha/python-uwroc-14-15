@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}New Post{% endblock %}
+
+{% block content %}
+	<a class="main-title" href="/blog">New Blog Post</a>
+
+	<hr>
+
+	<form method="post">
+		<label>
+			<div>Subject</div>
+			<input type="text" name="subject" value="{{subject}}">
+		</label>
+
+		<label>
+			<div>Content</div>
+			<textarea name="content">{{content}}</textarea>
+		</label>
+
+		<div class="error">{{error}}</div>
+
+		<input type="submit">
+	</form>
+{% endblock %}
+
+{% block js %}
+	<script>$("#nav-post").addClass("active");</script>
+{% endblock %}

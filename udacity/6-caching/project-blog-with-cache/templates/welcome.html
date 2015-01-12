@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block header %}
+	<meta http-equiv="refresh" content="3; url=/blog">
+{% endblock %}
+
+{% block content %}
+	<a class="main-title" href="/blog">Welcome {{username}}!</a>
+{% endblock %}

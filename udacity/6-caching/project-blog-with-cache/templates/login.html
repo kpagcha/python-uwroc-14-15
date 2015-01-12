@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+	<a class="main-title" href="/blog">Login</a>
+
+	<hr>
+
+	<div class="error">{{error}}</div>
+
+	<form method="post">
+		<label>
+			<div>Username</div>
+			<input type="text" name="username" value="{{username}}">
+		</label>
+
+		<label>
+			<div>Password</div>
+			<input type="password" name="password" value="{{password}}">
+		</label>
+
+		<input type="submit">
+	</form>
+{% endblock %}
+
+{% block js %}
+	<script>$("#nav-login").addClass("active");</script>
+{% endblock %}

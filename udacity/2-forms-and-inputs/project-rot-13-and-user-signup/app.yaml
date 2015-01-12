@@ -1,0 +1,20 @@
+application: hello-udacity-kpagcha
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  script: main.app
+
+- url: /(.*\.(gif|png|jpg))$
+  static_files: static/\1
+  upload: static/.*\.(gif|png|jpg)$
+
+- url: /.*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: latest

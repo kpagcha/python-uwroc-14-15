@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+	<a class="main-title" href="/blog">Blog</a>
+	<hr>
+
+	<div class="row">
+		<div class="col-sm-8">
+
+		{% for currentPost in currentPosts %}
+			<div class="entry">
+				<div class="row">
+					<div class="col-sm-8 entry-title">
+						{% set link = "/blog/" ~ currentPost.key().id() %}
+						<a href={{link}}>{{currentPost.subject}}</a>
+					</div>
+					<div class="col-sm-4 entry-created">{{currentPost.created.strftime("%b %d, %Y")}}</div>
+				</div>
+				<pre class="entry-body">{{currentPost.content}}</pre>
+			</div>
+			<hr>
+		{% endfor %}
+
+		</div>
+
+		<div class="col-sm-4">
+
+		{% if img_url %}
+			<h2>Recent post locations</h2>
+			<img class="img-responsive" src="{{img_url}}">
+		{% endif %}
+
+		</div>
+	</div>
+	<footer>
+		<p>{{secondsSince}}</p>
+	</footer>
+{% endblock %}
+
+{% block js %}
+	<script>$("#nav-home").addClass("active");</script>
+{% endblock %}

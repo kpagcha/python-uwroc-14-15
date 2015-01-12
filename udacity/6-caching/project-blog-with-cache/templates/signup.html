@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Sign up{% endblock %}
+
+{% block content %}
+	<a class="main-title" href="/blog">Sign up</a>
+
+	<hr>
+
+	<div class="error">{{error}}</div>
+
+	<form method="post">
+		<label>
+			<div>Username</div>
+			<input type="text" name="username" value="{{username}}">
+		</label>
+
+		<label>
+			<div>Password</div>
+			<input type="password" name="password" value="{{password}}">
+		</label>
+
+		<label>
+			<div>Verify Password</div>
+			<input type="password" name="verify" value="{{verify}}">
+		</label>
+
+		<label>
+			<div>Email</div>
+			<input type="text" name="email" value="{{email}}">
+		</label>
+
+		<input type="submit">
+	</form>
+{% endblock %}
+
+{% block js %}
+	<script>$("#nav-signup").addClass("active");</script>
+{% endblock %}

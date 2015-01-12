@@ -1,0 +1,2 @@
+http://interactivepython.org/runestone/static/thinkcspy/PythonTurtle/OurFirstTurtleProgram.html
+http://www.academia.edu/4266396/Creando_arboles_fractales_con_Turtle_en_Python
